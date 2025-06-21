@@ -35,7 +35,7 @@ body{
 }
 
 .heading-primary{
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin: 2rem;
     font-weight: 700;
@@ -65,36 +65,60 @@ body{
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.countdown-wrapper{
+.countdown-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    /* 32px space between items*/
-    margin-bottom: 4rem;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
 }
 
 .countdown-item{
     background-color: var(--accent-blue-1);
-    padding: 2rem;
+    padding: 1.2rem;
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 120px ;
+    min-width: 90px ;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Softer initial shadow */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-.countdown-number{
-    font-size: 5rem;
-    font-weight: 900; /* Extra bold */
-    line-height: 1;
-    margin-bottom: 0.5rem;
+.countdown-number {
+    font-size: 3rem;
+    font-weight: 900;
+
+    margin-bottom: 0.4rem;
     color: var(--dark-text);
+    display: inline-flex;
+    perspective: 500px;
+    justify-content: center;
+    align-items: center;
+
+
+    min-width: 3.0em; /* Minimum width for 3 digits (0.8em * 3 + padding) */
+    padding: 0 0.8em; /* Padding on the countdown-number container */
+
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.digit-group {
+    display: inline-flex; /* Keep inline-flex for vertical centering */
+    width: 0.65em; /* Width of a single digit container */
+    height: 1.1em; /* Height of a single digit container */
+    text-align: center;
+    position: relative;
+    transform-style: preserve-3d;
+    line-height: 1.1em;
+    vertical-align: top;
+    overflow: hidden;
+
 }
 
 .countdown-label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -106,6 +130,36 @@ body{
     font-weight: 600;
     color: var(--dark-text);
     margin-top: 2rem;
+}
+
+.scroll-down-arrow {
+    position: absolute; /* Position it relative to hero-section */
+    bottom: 30px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-text);
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove underline for anchor */
+    cursor: pointer;
+}
+.scroll-down-arrow:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px); /* Slight bounce on hover */
+}
+/* Add a subtle animation to the arrow itself */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+.scroll-down-arrow svg {
+    animation: bounce 1.5s infinite; /* Make the SVG bounce */
 }
 
 .food-grid {
@@ -145,7 +199,7 @@ body{
 }
 
 .food-item-card:hover .food-image {
-    /* Optional: subtle image scale on card hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1)
     transform: scale(1.03);
 }
 
