@@ -109,3 +109,115 @@ body{
     margin-top: 2rem;
 }
 
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.food-item-card {
+    background-color: var(--primary-background); /* Lavender background for cards */
+    padding: 2rem; /* 32px padding */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover */
+}
+
+.food-item-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and scale slightly on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+.food-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent card appearance */
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 8px; /* Slightly smaller border-radius than card */
+    margin-bottom: 1.5rem; /* 24px */
+    transition: transform 0.3s ease-out; /* Smooth scale on hover if img itself is interacted with */
+}
+
+.food-item-card:hover .food-image {
+    /* Optional: subtle image scale on card hover */
+    transform: scale(1.03);
+}
+
+.food-name {
+    font-size: 1.8rem; /* 29px */
+    font-weight: 700;
+    margin-bottom: 0.5rem; /* 8px */
+    color: var(--dark-text);
+}
+
+.food-description {
+    font-size: 1.1rem; /* 18px */
+    color: rgba(79, 79, 85, 0.8); /* Slightly lighter text for description */
+}
+
+/* Responsive Adjustments (Media Queries) */
+@media (max-width: 768px) {
+    .heading-primary {
+        font-size: 3rem; /* Reduce for tablet */
+    }
+
+    .heading-secondary {
+        font-size: 2.5rem; /* Reduce for tablet */
+    }
+
+    .countdown-item {
+        padding: 1.5rem; /* Reduce padding */
+    }
+
+    .countdown-number {
+        font-size: 4rem; /* Reduce for tablet */
+    }
+
+    .destination-text {
+        font-size: 2rem; /* Reduce for tablet */
+    }
+
+    .food-item-card {
+        padding: 1.5rem; /* Reduce card padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .heading-primary {
+        font-size: 2.5rem; /* Further reduce for mobile */
+    }
+
+    .heading-secondary {
+        font-size: 2rem; /* Further reduce for mobile */
+    }
+
+    .countdown-wrapper {
+        gap: 1rem; /* Reduce gap on mobile */
+    }
+
+    .countdown-item {
+        padding: 1rem; /* Smaller padding */
+        min-width: unset; /* Let it shrink more */
+    }
+
+    .countdown-number {
+        font-size: 3rem;
+    }
+
+    .countdown-label {
+        font-size: 1rem;
+    }
+
+    .destination-text {
+        font-size: 1.5rem;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
