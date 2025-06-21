@@ -1,10 +1,11 @@
 :root {
-    --primary-background: #CDB4DB;
-    --accent-pink-1: #FFC8DD;
-    --accent-pink-2: #FFAECC;
-    --accent-blue-1: #BDE0FE;
-    --accent-blue-2: #A2D2FF;
-    --dark-text: #4F4F55;
+    --primary-background: #E0C4F1;
+    --accent-pink-1: #FFB2D2;
+    --accent-pink-2: #FF88C2;
+    --accent-blue-1: #9BD1F5;
+    --accent-blue-2: #63B1ED;
+    --dark-text: #2C2C2E;
+    --subtle-text: #8A8A8E;
     --white: #FFFFFF;
 }
 
@@ -53,15 +54,13 @@ body{
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     padding: 5rem 0;
-    opacity: 0; /* Initial state for animation */
-    transform: translateY(20px); /* Initial state for animation */
+    transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition for fade-in */
 }
 
 .food-section{
     background-color: var(--accent-pink-1);
     padding: 5rem;
-    opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -87,15 +86,15 @@ body{
 }
 
 .countdown-number{
-    font-size: 5rem; /* 80px */
+    font-size: 5rem;
     font-weight: 900; /* Extra bold */
-    line-height: 1; /* Tightly spaced */
-    margin-bottom: 0.5rem; /* 8px */
+    line-height: 1;
+    margin-bottom: 0.5rem;
     color: var(--dark-text);
 }
 
 .countdown-label {
-    font-size: 1.2rem; /* 19px */
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -124,6 +123,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle shadow */
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover */
 }
@@ -135,11 +135,13 @@ body{
 
 .food-image {
     width: 100%;
-    height: 200px; /* Fixed height for consistent card appearance */
-    object-fit: cover; /* Crop image to fit */
-    border-radius: 8px; /* Slightly smaller border-radius than card */
-    margin-bottom: 1.5rem; /* 24px */
-    transition: transform 0.3s ease-out; /* Smooth scale on hover if img itself is interacted with */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transform: translateX(-100%); /* <-- THIS MUST BE PRESENT AND UNCOMMENTED */
+    opacity: 0; /* <-- THIS MUST BE PRESENT AND UNCOMMENTED */
+    transition: none;
 }
 
 .food-item-card:hover .food-image {
@@ -154,10 +156,7 @@ body{
     color: var(--dark-text);
 }
 
-.food-description {
-    font-size: 1.1rem; /* 18px */
-    color: rgba(79, 79, 85, 0.8); /* Slightly lighter text for description */
-}
+
 
 /* Responsive Adjustments (Media Queries) */
 @media (max-width: 768px) {

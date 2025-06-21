@@ -2,89 +2,92 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-    <title>Preparation for return</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <title>Preparation for return</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
-    <section class="hero-section">
-        <div class="hero-container">
-            <h1 class = "heading-primary"> Counting down to...</h1>
-            <div class="countdown-wrapper">
-                <div class="countdown-item">
-                    <h2 class="countdown-number"> id = "days" >00</h2>
-                        <p class="countdown-text">Days</p>
-                </div>
-                <div class="countdown-item">
-                    <h2 class="countdown-number"> id = "hours" >00</h2>
-                    <p class="countdown-text">Hours</p>
-                </div>
-                <div class="countdown-item">
-                    <h2 class="countdown-number"> id = "minutes" >00</h2>
-                    <p class="countdown-text">Minutes</p>
-                </div>
-                <div class="countdown-item">
-                    <h2 class="countdown-number"> id = "seconds" >00</h2>
-                    <p class="countdown-text">Seconds</p>
-                </div>
+<section class="hero-section">
+    <div class="container">
+        <h1 class = "heading-primary"> Counting down to...</h1>
+        <div class="countdown-wrapper">
+            <div class="countdown-item">
+                <h2 class="countdown-number">
+                    <span class="digit-group" id="days-tens">0</span><span class="digit-group" id="days-units">0</span>
+                </h2>
+                <p class="countdown-label">Days</p>
             </div>
-            <h3 class = "destination-text">Flying home !</h3>
-        </div>
-    </section>
-
-    <section class="food-section">
-        <div class = "container">
-            <h2 class = "heading-secondary">Foods I'm Craving : </h2>
-            <div class = "food-grid">
-                <div class = "food-item-card">
-                    <img src="../assets/pan mee.jpg"  alt="Pan mee"/>
-                    <h3 class="food-item-title">Pan Mee</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/nasi lemak.jpg" alt="Nasi lemak"/>
-                    <h3 class="food-item-title">Nasi Lemak</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/q house.webp" alt="Q House" />
-                    <h3 class="food-item-title">Q House</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/warakuya.jpg" alt = "Warakuya"/>
-                    <h3 class="food-item-title">Warakuya</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/DU.jpg" alt = "DU"/>
-                    <h3 class="food-item-title">DU</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/gamxun.jpg" alt = "DimSum"/>
-                    <h3 class="food-item-title">Dim Sum</h3>
-                </div>
-
-                <div class = "food-item-card">
-                    <img src="../assets/kooky cream/download.jpg" alt = "Kooky cream Birthday Cake"/>
-                    <h3 class="food-item-title">cake..</h3>
-                    <img src="../assets/kooky cream/images.jpg" alt = "Kooky Cream"/>
-                    <h3 class="food-item-title">for all my missed birthdays</h3>
-                </div>
+            <div class="countdown-item">
+                <h2 class="countdown-number">
+                    <span class="digit-group" id="hours-tens">0</span><span class="digit-group" id="hours-units">0</span>
+                </h2>
+                <p class="countdown-label">Hours</p>
+            </div>
+            <div class="countdown-item">
+                <h2 class="countdown-number">
+                    <span class="digit-group" id="minutes-tens">0</span><span class="digit-group" id="minutes-units">0</span>
+                </h2>
+                <p class="countdown-label">Minutes</p>
+            </div>
+            <div class="countdown-item">
+                <h2 class="countdown-number">
+                    <span class="digit-group" id="seconds-tens">0</span><span class="digit-group" id="seconds-units">0</span>
+                </h2>
+                <p class="countdown-label">Seconds</p>
             </div>
         </div>
-    </section>
+        <h3 class = "destination-text">Flying home !</h3>
+    </div>
+</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<section class="food-section">
+    <div class = "container">
+        <h2 class = "heading-secondary">Foods I'm Craving : </h2>
+        <div class = "food-grid">
+            <div class = "food-item-card">
+                <img src="assets/pan mee.jpg" class="food-image" alt="Pan mee"/>
+                <h3 class="food-item-title">Pan Mee</h3>
+            </div>
 
-    <script src="main.js"></script>
+            <div class = "food-item-card">
+                <img src="assets/nasi lemak.jpg" class="food-image" alt="Nasi lemak"/>
+                <h3 class="food-item-title">Nasi Lemak</h3>
+            </div>
+
+            <div class = "food-item-card">
+                <img src="assets/q house.webp" class="food-image" alt="Q House" />
+                <h3 class="food-item-title">Q House</h3>
+            </div>
+
+            <div class = "food-item-card">
+                <img src="assets/warakuya.jpg" class="food-image" alt = "Warakuya"/>
+                <h3 class="food-item-title">Warakuya</h3>
+            </div>
+
+            <div class = "food-item-card">
+                <img src="assets/DU.jpg" class="food-image" alt = "DU"/>
+                <h3 class="food-item-title">DU</h3>
+            </div>
+
+            <div class = "food-item-card">
+                <img src="assets/gamxun.jpg" class="food-image" alt = "DimSum"/>
+                <h3 class="food-item-title">Dim Sum</h3>
+            </div>
+
+            <div class = "food-item-card">
+                <img src="assets/kooky cream/download.jpg" class="food-image" alt = "Kooky Cream Birthday Cake"/>
+                <h3 class="food-item-title">Kooky Cream Cake</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
